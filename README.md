@@ -1,5 +1,28 @@
 Tautan: https://jessevan-gerard-sigmashop.pbp.cs.ui.ac.id/
 
+1. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
+    - Data delivery diperlukan untuk menghubungkan backend dan frontend, sehingga data dari server dapat ditampilkan secara dinamis kepada pengguna. Selain itu, data delivery memungkinkan integrasi antar sistem serta menjaga keamanan dan efisiensi dalam pengelolaan informasi.
+
+2. Menurutmu, mana yang lebih baik antara XML dan JSON? Mengapa JSON lebih populer dibandingkan XML?
+    - Berdasarkan popularitas saat ini, sepertinya saya lebih prefer JSON. Mengapa? JSON lebih populer daripada XML karena lebih ringan, sederhana, dan mudah dibaca serta diurai oleh manusia dan komputer, terutama dalam konteks pertukaran data web (API). XML, sebagai bahasa markup yang kompleks dengan struktur tag yang rigid, menghasilkan ukuran file yang lebih besar, sehingga JSON unggul dalam hal kecepatan transfer data dan kemudahan integrasi dengan berbagai bahasa pemrograman modern.
+
+3. Jelaskan fungsi dari method is_valid() pada form Django dan mengapa kita membutuhkan method tersebut?
+    - Method is_valid() pada form Django berfungsi untuk melakukan validasi terhadap data yang dikirimkan melalui form, seperti memeriksa apakah semua field diisi dengan benar sesuai tipe dan aturan yang ditentukan. Kita membutuhkannya untuk memastikan bahwa data yang akan disimpan ke database adalah data yang valid dan aman.
+
+4. Mengapa kita membutuhkan csrf_token saat membuat form di Django? Apa yang dapat terjadi jika kita tidak menambahkan csrf_token pada form Django? Bagaimana hal tersebut dapat dimanfaatkan oleh penyerang?
+    - Kita membutuhkan csrf_token pada form Django untuk melindungi aplikasi dari serangan Cross-Site Request Forgery (CSRF), yaitu serangan di mana penyerang memalsukan permintaan dari pengguna yang telah login untuk melakukan aksi tanpa sepengetahuan mereka. Jika csrf_token tidak ditambahkan, penyerang dapat mengeksploitasi sesi pengguna yang aktif untuk mengirim permintaan berbahaya (seperti mengubah data atau melakukan transaksi) seolah-olah berasal dari pengguna tersebut. Dengan csrf_token, Django memastikan bahwa setiap permintaan POST benar-benar berasal dari form yang sah di situs kita sendiri.
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+    - Pertama, saya melakukan git init dan menyalakan kembali env, lalu mulai menambahkan fungsi-fungsi di views.py mulai dari show_xml, show_json, show_xml_by_id, dan terakhir show_json_by_id. Tidak lupa juga, saya mengimport fungsi-fungsi yang saya perlukan dari library yang ada. Kemudian saya menautkan fungsi-fungsi yang sudah saya tambahkan di urls.py. Untuk models.py sendiri perubahannya tidak terlalu banyak. Lalu saya membuat form create_product.html dan product_details.html dan menautkannya. Setelah memastikan semua perubahan baru di kode sudah disimpan dan tidak ada error lainnya, saya melakukan python manage.py runserver dan mencoba semua fitur yang ada melalui localhost. Kemudian saya mengerjakan soal-soal ini dan membuka tautan melalui Postman dan mengunggah hasil *screenshot* dan menaruhnya di bawah ini. Demikianlah tahapan-tahapan di checklist ini saya lakukan.
+
+6. Apakah ada feedback untuk asdos di tutorial 2 yang sudah kalian kerjakan?
+    - Sudah mantap! Tetap pertahankan performa dan pengajarannya :D
+
+URL *screenshot* Postman (Maaf rada burem ;-;):
+https://drive.google.com/drive/folders/16qCWZJbpJ7P3gPqH_mNShMwUBZ1gh5CX?usp=sharing
+
+-----------------------------------------------------------------------------
+JAWABAN SOAL LAMA
 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
     - Pertama-tama, saya mengikuti setiap langkah-langkah yang penting mengikuti tutorial yang diberikan kemarin, sembari mengikut tutorial, saya mengubah beberapa variabel seperti yang diminta dalam tugas kali ini, contohnya membuat model pada aplikasi main dengan nama "Product", bukan "News", lalu menambahkan atribut-atribut yang diminta seperti name, price, description, thumbnail, category, dan is_featured. Lalu menyelesaikan langkah-langkah berikutnya seperti pada tutorial kemarin.
 
