@@ -1,5 +1,26 @@
 Tautan: https://jessevan-gerard-sigmashop.pbp.cs.ui.ac.id/
 
+1.  Apa itu Django AuthenticationForm? Jelaskan juga kelebihan dan kekurangannya.
+    - Django AuthenticationForm adalah form bawaan untuk proses login yang memverifikasi username dan password. Kelebihannya adalah aman dan siap pakai, sedangkan kekurangannya kurang fleksibel untuk login yang lebih kompleks.
+
+2.  Apa perbedaan antara autentikasi dan otorisasi? Bagaiamana Django mengimplementasikan kedua konsep tersebut?
+    - Autentikasi adalah proses memverifikasi identitas pengguna, sedangkan otorisasi adalah proses menentukan hak akses pengguna terhadap sumber daya. Django mengimplementasikan autentikasi melalui sistem login dan session, sedangkan otorisasi melalui model permission dan decorators seperti @login_required atau @permission_required.
+
+3.  Apa saja kelebihan dan kekurangan session dan cookies dalam konteks menyimpan state di aplikasi web?
+    - Kelebihan session: lebih aman karena data disimpan di server, cocok untuk menyimpan informasi sensitif.
+    Kekurangan session: membebani server karena semua data pengguna disimpan di sisi server.
+
+    Kelebihan cookies: ringan untuk server karena data disimpan di sisi klien, cocok untuk preferensi pengguna.
+    Kekurangan cookies: kurang aman karena data bisa dimanipulasi oleh pengguna dan terbatas ukurannya.
+
+4.  Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai? Bagaimana Django menangani hal tersebut?
+    - Penggunaan cookies tidak sepenuhnya aman secara default karena data disimpan di sisi klien dan dapat dimanipulasi atau dicuri melalui serangan seperti XSS. Django menangani risiko ini dengan menyediakan opsi keamanan seperti HttpOnly, Secure, dan SESSION_COOKIE_SAMESITE untuk membatasi akses dan mencegah penyalahgunaan cookies oleh pihak yang tidak sah.
+
+5.  Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+    - Pertama-tama, saya menyalakan kembali env dalam PowerShell, lalu mengimplementasikan perubahan-perubahan yang diinginkan mulai dari fitur dan halaman form register, login, logout. Kemudian saya membatasi akses halaman Main dan News Detail sehingga User yang belum login harus melakukan login terlebih dahulu. Kemudian menambahkan data dari Cookies untuk mencatat last login User. Terakhir saya menghubungkan model Product dengan User sehingga ketika login nama mengikuti username yang login dan setiap Product yang dibuat dapat terlihat siapa Author-nya dan bisa di sort juga. 
+    
+-----------------------------------------------------------------------------
+JAWABAN TUGAS 3
 1. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
     - Data delivery diperlukan untuk menghubungkan backend dan frontend, sehingga data dari server dapat ditampilkan secara dinamis kepada pengguna. Selain itu, data delivery memungkinkan integrasi antar sistem serta menjaga keamanan dan efisiensi dalam pengelolaan informasi.
 
@@ -22,7 +43,7 @@ URL *screenshot* Postman (Maaf rada burem ;-;):
 https://drive.google.com/drive/folders/16qCWZJbpJ7P3gPqH_mNShMwUBZ1gh5CX?usp=sharing
 
 -----------------------------------------------------------------------------
-JAWABAN SOAL LAMA
+JAWABAN TUGAS 2
 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
     - Pertama-tama, saya mengikuti setiap langkah-langkah yang penting mengikuti tutorial yang diberikan kemarin, sembari mengikut tutorial, saya mengubah beberapa variabel seperti yang diminta dalam tugas kali ini, contohnya membuat model pada aplikasi main dengan nama "Product", bukan "News", lalu menambahkan atribut-atribut yang diminta seperti name, price, description, thumbnail, category, dan is_featured. Lalu menyelesaikan langkah-langkah berikutnya seperti pada tutorial kemarin.
 
